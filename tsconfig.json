@@ -1,0 +1,58 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "es2020",
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "paths": {
+      /*** Develop build start****/
+      //      "auth/login-page": [
+      //        "projects/auth/login-page/src/public-api.ts"
+      //      ],
+      //      "auth/registration-page": [
+      //        "projects/auth/registration-page/src/public-api.ts"
+      //      ],
+      //      "auth": [
+      //        "projects/auth/src/public-api.ts"
+      //      ]
+      /*** Develop build end****/
+
+      /*** Package build start****/
+      "auth": [
+        "dist/auth/auth",
+        "dist/auth"
+      ],
+      "auth/*": [
+        "dist/auth/auth/*",
+        "dist/auth/*"
+      ]
+      /*** Package build  end****/
+    }
+  },
+  "angularCompilerOptions": {
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true,
+    "preserveWhitespaces": true,
+    "fullTemplateTypeCheck": true,
+    "enableIvy": true
+  }
+}
